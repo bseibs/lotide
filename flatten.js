@@ -1,38 +1,15 @@
-//assertArraysEqual function
-function eqArrays(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
+function flatten(arr) {
+  let flattenedArray = [];
 
-  // Check each element of the arrays
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false; // If any elements are not equal, return false
+  arr.forEach(element => {
+    if (Array.isArray(element)) {
+      flattenedArray.push(...flatten(element));
+    } else {
+      flattenedArray.push(element);
     }
-  }
+  });
 
-  return true; // If all elements are equal, return true
+  return flattenedArray;
 }
-//eqArrays function
-function eqArrays(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  //check the element of each
-  for (let i = 0; i < arr1.length; i++) {
-    //if not equal return false
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-    //if elements are equal return true
-    return true;
-  }
-}
-//flatten function
-function flatten(arr1, arr2) {
-  for (let i = 0; i < arr1.length; i++) {
 
-  }
-
-  for (let x = 0, x < arr2.length; x++)
-}
+console.log(flatten([1, 2, [3, 4], 5, [6]])); // Output: [1, 2, 3, 4, 5, 6]
