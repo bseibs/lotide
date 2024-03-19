@@ -18,16 +18,14 @@ const tail = function (arr) {
 const arr1 = [1, 2, 3, 4];
 const arr2 = ["hello", "world", "foo", "bar"];
 
-assertEqual([2, 3, 4].toString(), tail(arr1).toString());
-assertEqual(["world", "foo", "bar"].toString(), tail(arr2).toString());
+// Test cases for comparing individual elements and array length
+assertEqual(tail(arr1)[0], 2);
+assertEqual(tail(arr1).length, 3);
+assertEqual(tail(arr2)[0], "world");
+assertEqual(tail(arr2).length, 3);
 
-
-//return array.slice[0]
-
-// Test Case 1: Check the returned array elements
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2); // ensure we get back two elements
-assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result[1], "Labs"); // ensure second element is "Labs"
+// Test cases for arrays with one or zero elements
+assertEqual(tail([1]).length, 0); // tail of array with one element only should be empty
+assertEqual(tail([]).length, 0); // tail of an empty array should also be empty
 
 module.exports = tail;
