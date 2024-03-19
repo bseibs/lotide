@@ -1,19 +1,25 @@
 const assertEqual = function (expected, actual) {
-  if (expected === actual){
-    console.log(`Assertion Passed: [actual] === [expected]`);
-    } else {
-      console.log(`Assertion Failed: [actual] !== [expected]`);
-      }
-    }
-let tailArr = []
+  if (expected === actual) {
+    console.log(`Assertion Passed: ${actual} === ${expected}`);
+  } else {
+    console.log(`Assertion Failed: ${actual} !== ${expected}`);
+  }
+}
+
 const tail = function (arr) {
-  for (const item of arr) {
-    if (item !== arr[0]) {
-      tailArr.push(item);
-    }
+  let tailArr = [];
+  for (let i = 1; i < arr.length; i++) {
+    tailArr.push(arr[i]);
   }
   return tailArr;
 };
+
+// Test cases
+const arr1 = [1, 2, 3, 4];
+const arr2 = ["hello", "world", "foo", "bar"];
+
+assertEqual([2, 3, 4].toString(), tail(arr1).toString());
+assertEqual(["world", "foo", "bar"].toString(), tail(arr2).toString());
 
 
 //return array.slice[0]
