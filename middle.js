@@ -30,5 +30,7 @@ const middle = function (array) {
     return [array[middleIndex - 1], array[middleIndex]];
   }
 };
-module.exports = middle;
-module.exports = assertArraysEqual;
+module.exports = {
+  middle,
+ assertArraysEqual
+};
