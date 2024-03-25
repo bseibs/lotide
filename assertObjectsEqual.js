@@ -53,3 +53,5 @@ const obj3 = { a: '1', b: 2, c: [1, 2, 3] };
 
 assertObjectsEqual(obj1, obj2); // Should pass
 assertObjectsEqual(obj1, obj3); // Should fail
+
+module.exports = assertObjectsEqual;

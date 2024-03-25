@@ -74,3 +74,5 @@ console.log("Result>>", eqObjects(obj1, obj2));
 //one value can be array while another is not. 
 //possible neither are arrays
 //possible both are arrays
+
+module.exports = eqObjects;

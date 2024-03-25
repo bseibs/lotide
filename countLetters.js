@@ -16,3 +16,5 @@ const countLetters = function (sentence) {
   return result;
 }
 console.log(countLetters("apple is good"))
+
+module.exports = countLetters;

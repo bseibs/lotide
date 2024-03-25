@@ -10,3 +10,5 @@ const findKey = function (object, callback) {
   // If no key is found, return undefined
   return undefined;
 };
+
+module.export = findKey;

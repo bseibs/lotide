@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@bseibz/lotide",
   "version": "1.0.0",
-  "main": "assertArraysEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },

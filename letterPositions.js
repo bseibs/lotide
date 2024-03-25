@@ -48,3 +48,5 @@ function eqArrays(arr1, arr2) {
 
 //test case
 console.log(letterPositions("loo"))
+
+module.exports = letterPositions;
